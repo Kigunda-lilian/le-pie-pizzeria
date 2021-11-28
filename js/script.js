@@ -10,12 +10,25 @@ class Pizza {
 
 const cart = [];
 
-function UpdateCartList(cart) {
-    let cartList = document.getElementById("cart-list");
+function AddToCart01(pizzaSize, topping, crust, price, pizzaQuantity) {
+    pizza = new Pizza(pizzaSize, "pineapple", "stuffed", price, parseInt(pizzaQuantity));
+
+    // Add pizza object to array cart.
+    cart.push(pizza);
+
+    /*
+     *  Find number of total pizza quantity
+     */
+    let cartItemscount = 0;
+    // Loop each pizza object
     cart.forEach(pizzaObject => {
-        cartList.innerHTML += "<div>size: <br> crust: <br> toppings: <br> quantity: <br> price: <br></div>";
+        cartItemscount += pizzaObject.quantity; // Sum the number of pizza quantity.
     });
-};
+
+    document.getElementById("cart-badge").innerText = cartItemscount;
+
+    UpdateCartList(cart);
+}
 
 function AddToCart() {
     pizzaSize = document.getElementById("pizza-size").value;
@@ -35,16 +48,39 @@ function AddToCart() {
     price = sizePrice + toppingPrice + crustPrice;
     pizza = new Pizza(pizzaSize, "pineapple", "stuffed", price, parseInt(pizzaQuantity));
 
+    // Add pizza object to array cart.
     cart.push(pizza);
 
+    /*
+     *  Find number of total pizza quantity
+     */
     let cartItemscount = 0;
+    // Loop each pizza object
     cart.forEach(pizzaObject => {
-        console.log(pizzaObject);
-        cartItemscount += pizzaObject.quantity;
+        cartItemscount += pizzaObject.quantity; // Sum the number of pizza quantity.
     });
 
-    console.log(cartItemscount);
     document.getElementById("cart-badge").innerText = cartItemscount;
+
+    UpdateCartList(cart);
+}
+
+function UpdateCartList(cart) {
+
+    let cartList = document.getElementById("cart-list");
+    cartList.innerHTML = "";
+
+    cart.forEach(function(pizzaObject, index) {
+        console.log(index);
+        cartList.innerHTML += "<div>" +
+            "size: " + pizzaObject.size + "<br> crust: <br> toppings: <br> quantity: " + pizzaObject.quantity + " <br> price: <br>" +
+            "<button onclick='RemovePizza(" + index + ")'>remove</button></div>" +
+            "<br>";
+    });
+};
+
+function RemovePizza(index) {
+    cart.splice(index, 1);
 
     UpdateCartList(cart);
 }
