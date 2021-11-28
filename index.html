@@ -10,53 +10,72 @@
     <!-- CDN Bootstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-
+    <link rel="stylesheet" href="bootstrap.css">
     <!-- End of CDN Bootstrap link -->
-    <!-- google fonts links -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comforter&display=swap" rel="stylesheet">
-    <!-- End of google fonts links -->
     <!-- css link -->
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#" id="pizerria">
-                    <img src=" /docs/5.1/assets/brand/bootstrap-logo.svg " alt=" " width="30 " height="24 " class="d-inline-block align-text-top "><br><span id="pizza">La-Pie-Pizzeria</span>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <header class="header" id="my header">
+        <div class="row align-items-centre ">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#" id="pizerria">
+                        <img src="images/pizzainn-removebg-preview.png" alt=" " width="60 " height="60 " class="d-inline-block align-text-top "><span id="pizza"><em><stong>pizzette hut</stong></em></span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-                <div class=" collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-5 px-5 ">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href=" # ">Pizzas</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link " href="# ">Contact</a>
-                        </li>
+                    <div class=" collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-5 px-5 ">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href=" # ">Pizzas</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link " href="# ">Contact</a>
+                            </li>
 
 
-                    </ul>
-                    <form class="d-flex px-5">
-                        <input class="form-control me-2 " type="search " placeholder="Search " aria-label="Search ">
-                        <button class="btn btn-outline-success " type="submit ">Search</button>
-                    </form>
-                    <i class="bi bi-cart4"></i>
+                        </ul>
+                        <form class="d-flex px-5">
+                            <input class="form-control me-2 " type="search " placeholder="Search " aria-label="Search ">
+                            <button class="btn btn-outline-success " type="submit ">Search</button>
+                        </form>
+                        <i class="bi bi-cart4"></i>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
+    <div class="container-fluid mb-3 bg-dark" id="landingpage">
+        <div class="container justify-content-center">
+            <div class="col-4 mt-5 pt-5 px-5 " id="landingphrase" style="font-family: 'Parisienne', cursive;">
+                <h5 id="phrase"><em><strong>We do <span>PIIZA</span> right </strong></em></h5><br>
+                <p>Our delivery services makes it easier to enjoy our finger-linking pizzas.<br><br>We serve the <span>best one</span> here!!</p> <br><br><br>
+                <a class="btn btn-success" href="#" role="button">Order Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center pt-5" id="AboutUs">
+        <h1>About<span> Us</span></h1>
+        <div class="row">
+            <div class="col-6 pt-5 px-5" id="About">
+                <h2>We've been Making The Delicious Pizza Since Long</h2>
+                <p> We are here to make your dine time worth it.Just come to <strong>Pizzette Hut Pizzerria</strong> and have your favourite flavour in pizza and make more fun and love with your lovings.<br><br> Pizzette Hut Pizzeria also provides <span>Alot of Deals</span>                    that you can avail and you can also take it to your family as they are awaiting for Pizzete Hut Delicious pizzas.</p>
+            </div>
+            <div class="col-6 pt-5 px-3" id="AboutImage">
+                <img src="./images/people&pizza4.jpg" alt="">
+
+            </div>
+        </div>
+    </div>
 
 </body>
 

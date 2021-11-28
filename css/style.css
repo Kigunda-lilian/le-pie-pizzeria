@@ -1,10 +1,89 @@
+/* google fonts link */
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Aclonica&family=Amatic+SC&family=Architects+Daughter&family=Cabin+Sketch&family=Carter+One&family=Caveat&family=Chewy&family=Comfortaa:wght@300&family=Comforter&family=Comforter+Brush&family=Concert+One&family=Cookie&family=Courgette&family=Dancing+Script&family=Eczar&family=Estonia&family=Fredericka+the+Great&family=Gloria+Hallelujah&family=Gochi+Hand&family=Handlee&family=Indie+Flower&family=Kalam:wght@300&family=Kaushan+Script&family=Lobster&family=Lobster+Two&family=M+PLUS+Code+Latin:wght@100&family=Marck+Script&family=Merienda&family=Pacifico&family=Pangolin&family=Patrick+Hand&family=Permanent+Marker&family=Praise&family=Puppies+Play&family=Righteous&family=Road+Rage&family=Special+Elite&family=Work+Sans:wght@100&family=Yellowtail&family=Yuji+Boku&display=swap');
+
+/*End google fonts link */
+
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+
+/* general css */
+
+html {
+    scroll-behavior: smooth;
+}
+
 #pizza {
     color: crimson;
-    font-size: xx-large;
-    font-family: 'Comforter', cursive !important;
+    font-size: large;
+    font-family: 'Kaushan Script', cursive !important;
     font-weight: bolder;
+}
+
+#landingpage {
+    background-image: url(../images/pizza\ background19.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: grey;
+    background-position: center;
+}
+
+#phrase {
+    color: white;
+    justify-content: center;
+    font-family: 'Carter One', cursive !important;
+    font-size: 35px;
+}
+
+#phrase span {
+    color: crimson;
+}
+
+#landingphrase {
+    justify-content: center;
+    position: absolute;
+    padding-top: 15% !important;
+    font-family: 'Comfortaa', cursive !important;
+    color: white;
+    text-rendering: optimizeLegibility;
+}
+
+p {
+    letter-spacing: 0.5px;
+    text-rendering: optimizeLegibility;
+    font-size: 18px;
+}
+
+#landingphrase p span {
+    color: #198754;
+    font-weight: 700;
+}
+
+#About p strong {
+    color: crimson;
+}
+
+#About p span {
+    color: #198754;
+    font-weight: 900;
+}
+
+#AboutUs h1 span {
+    color: crimson;
+}
+
+#About h2 {
+    font-family: 'Fredericka the Great', cursive;
+    ;
+}
+
+#AboutUs h1 {
+    font-family: Carter One;
+}
+
+#About {
+    font-family: 'Comfortaa', cursive !important;
 }
