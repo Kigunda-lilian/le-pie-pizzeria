@@ -91,3 +91,19 @@ p {
 #footer {
     background: transparent;
 }
+
+#button-addon2 {
+    background-color: black !important;
+}
+
+#News {
+    background-color: rgba(179, 26, 54, 0.2);
+    margin-top: 40px;
+}
+
+.modal-header {
+    color: black !important;
+}
+.modal-body{
+    color: black !important;
+}
