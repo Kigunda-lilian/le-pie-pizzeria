@@ -87,3 +87,7 @@ p {
 #About {
     font-family: 'Comfortaa', cursive !important;
 }
+
+#footer {
+    background: transparent;
+}
