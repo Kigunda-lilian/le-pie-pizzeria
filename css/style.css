@@ -89,21 +89,27 @@ p {
 }
 
 #footer {
-    background: transparent;
+    background-color: black !important;
+    opacity: 0.5;
+    color: white;
 }
 
 #button-addon2 {
     background-color: black !important;
+    opacity: 0.9;
 }
 
 #News {
-    background-color: rgba(179, 26, 54, 0.2);
+    background-color: crimson;
+    opacity: 0.8;
     margin-top: 40px;
+    color: white;
 }
 
 .modal-header {
     color: black !important;
 }
-.modal-body{
+
+.modal-body {
     color: black !important;
 }
