@@ -24,7 +24,7 @@
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#" id="pizerria">
                         <img src="images/pizzainn-removebg-preview.png" alt=" " width="60 " height="60 " class="d-inline-block align-text-top "><span id="pizza"><em>
-                                <stong>pizzette hut</stong>
+                                <strong>pizzette hut</strong>
                             </em></span>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,15 +39,15 @@
                                 <a class="nav-link" href="#">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href=" # ">Pizzas</a>
+                                <a class="nav-link" href=" ">Pizzas</a>
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link " href="# ">Contact</a>
                             </li>
                             <li class="nav-item ">
                                 <form class="d-flex px-5">
-                                    <input class="form-control me-2 " type="search " placeholder="Search " aria-label="Search ">
-                                    <button class="btn btn-outline-success " type="submit ">Search</button>
+                                    <input class="form-control me-2 " type="search" placeholder="Search " aria-label="Search ">
+                                    <button class="btn btn-outline-success " type="submit">Search</button>
                                 </form>
                             </li>
                             <li class="nav-item ">
@@ -68,7 +68,7 @@
             </nav>
         </div>
     </header>
-    <div class="container-fluid mb-3 bg-dark" id="landingpage">
+    <div class="container-fluid mb-3 bg-dark" id="landingpage" style="background-image: url('images/pizza-background19.jpg')">
         <div class="container justify-content-center">
             <div class="col-4 mt-5 pt-5 px-5 " id="landingphrase" style="font-family: 'Parisienne', cursive;">
                 <h5 id="phrase"><em><strong>We do <span>PIIZA</span> right </strong></em></h5><br>
@@ -122,9 +122,9 @@
                                     <label for="inputPassword" class="col-sm-4 col-form-label">Pizza crust</label>
                                     <div class="col-sm-8">
                                         <select id="pizzacrust" class="form-select" aria-label="Default select example">
-                                            <option value="1">Glutten-free</option>
-                                            <option value="2">Crispsy</option>
-                                            <option value="3">Stuffed</option>
+                                            <option>Glutten-free</option>
+                                            <option >Crispsy</option>
+                                            <option >Stuffed</option>
                                         </select>
                                     </div>
                                 </div>
@@ -132,9 +132,9 @@
                                     <label for="inputPassword" class="col-sm-4 col-form-label">Pizza toppings</label>
                                     <div class="col-sm-8">
                                         <select id="pizzatoppings" class="form-select" aria-label="Default select example">
-                                            <option value="1">onion</option>
-                                            <option value="2">pineapple</option>
-                                            <option value="3">sausages</option>
+                                            <option>onion</option>
+                                            <option >pineapple</option>
+                                            <option >sausages</option>
                                         </select>
                                     </div>
                                 </div>
@@ -172,14 +172,14 @@
                                     </div>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <input onchange="removeDeliveryCost()" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
                                     <label class="form-check-label" for="flexRadioDefault1">
                                       pick up
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                    <label class="form-check-label" for="flexRadioDefault2">
+                                    <input id="pizza-delivery" onchange="addDeliveryCost()" class="form-check-input" type="radio" name="flexRadioDefault">
+                                    <label class="form-check-label">
                                       Delivered
                                     </label>
                                 </div>
@@ -193,7 +193,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Check out</button>
+                                <button onclick=" checkout()" class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Check out</button>
                             </div>
                         </div>
                     </div>
@@ -326,7 +326,7 @@
                 <a href=""> <i class="bi bi-twitter"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
                 <a href=""><i class="bi bi-instagram"></i></a>
-                <p>copyright &copy 2021<br> Pizzette hut</b>
+                <p>copyright &copy 2021<br> Pizzette hut<br>
                 </p>
             </div>
         </div>

@@ -1,4 +1,5 @@
 class Pizza {
+
     constructor(size, topping, crust, price, quantity) {
         this.size = size;
         this.topping = topping;
@@ -30,55 +31,59 @@ function AddToCart01(pizzaSize, pizzatoppings, pizzacrust, price, pizzaQuantity)
     UpdateCartList(cart);
 }
 
+let totalCost = 0;
+
 function AddToCart() {
     pizzaSize = document.getElementById("pizza-size").value;
     pizzaQuantity = document.getElementById("pizza-quantity").value;
     pizzaCrust = document.getElementById("pizzacrust").value;
     pizzaToppings = document.getElementById("pizzatoppings").value;
+
     // console.log(pizzaSize);
 
     let sizePrice = 0;
-
-    if (sizePrice == "Large") {
-        price = 475;
-    } else if (sizePrice == "Medium") {
-        price = 400;
-    } else if (sizePrice == "Small") {
-        price = 380;
+    if (pizzaSize == "Large") {
+        sizePrice = 475;
+    } else if (pizzaSize == "Medium") {
+        sizePrice = 400;
+    } else if (pizzaSize == "Small") {
+        sizePrice = 380;
 
     }
 
     let toppingPrice = 0;
-    if (toppingPrice == "Glutten-free") {
-        price = 375;
-    } else if (toppingPrice == "Crispsy") {
-        price = 300;
-    } else if (toppingPrice == "Stuffed") {
-        price = 280;
+    if (pizzaToppings == "Glutten-free") {
+        toppingPrice = 375;
+    } else if (pizzaToppings == "Crispsy") {
+        toppingPrice = 300;
+    } else if (pizzaToppings == "Stuffed") {
+        toppingPrice = 280;
 
     }
 
     let crustPrice = 0;
-    if (crustPrice == "pineapple") {
-        price = 475;
-    } else if (crustPrice == "onion") {
-        price = 300;
-    } else if (crustPrice == "sausages") {
-        price = 180;
+    if (pizzaCrust == "pineapple") {
+        crustPrice = 475;
+    } else if (pizzaCrust == "onion") {
+        crustPrice = 300;
+    } else if (pizzaCrust == "sausages") {
+        crustPrice = 180;
 
     }
 
     price = sizePrice + toppingPrice + crustPrice;
-    pizza = new Pizza("pizzaSize", "pizzaToppings", "pizzaCrust", parseInt(price), parseInt(pizzaQuantity));
+    pizza = new Pizza(pizzaSize, pizzaToppings, pizzaCrust, price, parseInt(pizzaQuantity));
+
 
     // Add pizza object to array cart.
     cart.push(pizza);
+    console.log(cart);
 
     /*
      *  Find number of total pizza quantity
      */
     let cartItemscount = 0;
-    let totalCost = 0;
+
     // Loop each pizza object
     cart.forEach(pizzaObject => {
         cartItemscount += pizzaObject.quantity; // Sum the number of pizza quantity.
@@ -86,10 +91,21 @@ function AddToCart() {
     });
 
     document.getElementById("cart-badge").innerText = cartItemscount;
+
     document.getElementById("cart-total-cost").innerText = totalCost;
 
 
     UpdateCartList(cart);
+}
+
+function addDeliveryCost() {
+    totalCost += 200;
+    document.getElementById("cart-total-cost").innerText = totalCost;
+}
+
+function removeDeliveryCost() {
+    totalCost -= 200;
+    document.getElementById("cart-total-cost").innerText = totalCost;
 }
 
 function UpdateCartList(cart) {
@@ -110,4 +126,8 @@ function RemovePizza(index) {
     cart.splice(index, 1);
 
     UpdateCartList(cart);
+}
+
+function checkout() {
+    alert("Your order has been received")
 }
